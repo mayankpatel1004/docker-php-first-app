@@ -34,3 +34,17 @@ docker run -it --rm --name my-running-app my-php-app<br />
 docker run -d -p 3000:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.4-apache<br />
 docker-compose up -d<br />
 docker stop $(docker ps -a -q)<br />
+
+Stop the container(s) using the following command:<br />
+docker-compose down
+
+Delete all containers using the following command:
+docker rm -f $(docker ps -a -q)
+
+Delete all volumes using the following command:
+docker volume rm $(docker volume ls -q)
+
+Restart the containers using the following command:
+docker-compose up -d
+
+
