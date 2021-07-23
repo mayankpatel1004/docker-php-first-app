@@ -11,22 +11,26 @@ docker stop $(docker ps -a -q)
 docker-compose up -d (Start application)
 
 docker build -t my-php-app .
+
+
 docker run -it --rm --name my-running-app my-php-app
-docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php your-script.php\n
-docker build -t my-php-app .
-docker run -it --rm --name my-running-app my-php-app
-docker version
-docker system prune (Remove all unused containers, networks, images)
-docker system prune -a (remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command)
-docker images -a 
-docker images -f dangling=true
-docker image prune (Remove Images)
-docker ps (The docker ps command only shows running containers by default.)
-docker ps -a (To see all containers, use the -a (or --all ) flag)
-docker system prune (Docker command that is used to remove or delete unused objects or data)
-docker image prune (The docker image prune command allows you to clean up unused images.)
-docker build -t my-php-app .
-docker run -it --rm --name my-running-app my-php-app
-docker run -d -p 3000:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.4-apache
-docker-compose up -d
-docker stop $(docker ps -a -q)
+
+
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php your-script.php\n<br />
+docker build -t my-php-app .<br />
+docker run -it --rm --name my-running-app my-php-app<br />
+docker version<br />
+docker system prune (Remove all unused containers, networks, images)<br />
+docker system prune -a (remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command)<br />
+docker images -a <br />
+docker images -f dangling=true<br />
+docker image prune (Remove Images)<br />
+docker ps (The docker ps command only shows running containers by default.)<br />
+docker ps -a (To see all containers, use the -a (or --all ) flag)<br />
+docker system prune (Docker command that is used to remove or delete unused objects or data)<br />
+docker image prune (The docker image prune command allows you to clean up unused images.)<br />
+docker build -t my-php-app .<br />
+docker run -it --rm --name my-running-app my-php-app<br />
+docker run -d -p 3000:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.4-apache<br />
+docker-compose up -d<br />
+docker stop $(docker ps -a -q)<br />
