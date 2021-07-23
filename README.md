@@ -3,24 +3,24 @@
 
 docker run -d -p 3000:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.4-apache
 
-docker container ls -a
-docker rm fsd2112 (fsd is container name)
+docker container ls -a<br />
+docker rm fsd2112 (fsd is container name)<br /><br />
 
 
-docker stop $(docker ps -a -q)
-docker-compose up -d (Start application)
+docker stop $(docker ps -a -q)<br />
+docker-compose up -d (Start application)<br /><br />
 
-docker build -t my-php-app .
-
-
-docker run -it --rm --name my-running-app my-php-app
+docker build -t my-php-app .<br />
 
 
-docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php your-script.php\n<br />
-docker build -t my-php-app .<br /><br />
 docker run -it --rm --name my-running-app my-php-app<br />
+
+
+docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php your-script.php\n<br /><br />
+docker build -t my-php-app .<br /><br />
+docker run -it --rm --name my-running-app my-php-app<br /><br />
 docker version<br /><br />
-docker system prune (Remove all unused containers, networks, images)<br />
+docker system prune (Remove all unused containers, networks, images)<br /><br />
 docker system prune -a (remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command)<br />
 docker images -a <br /><br />
 docker images -f dangling=true<br /><br />
