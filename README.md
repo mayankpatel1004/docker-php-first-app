@@ -36,15 +36,15 @@ docker-compose up -d<br />
 docker stop $(docker ps -a -q)<br />
 
 Stop the container(s) using the following command:<br />
-docker-compose down
+docker-compose down<br /><br />
 
-Delete all containers using the following command:
-docker rm -f $(docker ps -a -q)
+Delete all containers using the following command:<br />
+docker rm -f $(docker ps -a -q)<br /><br />
 
-Delete all volumes using the following command:
-docker volume rm $(docker volume ls -q)
+Delete all volumes using the following command:<br />
+docker volume rm $(docker volume ls -q)<br /><br />
 
-Restart the containers using the following command:
-docker-compose up -d
+Restart the containers using the following command:<br />
+docker-compose up -d<br /><br />
 
 
